@@ -2,7 +2,7 @@
 RetailItem::RetailItem()
 {
 	description = "No Description";
-	unitsOnHand = 0.0;
+	unitsOnHand = 0;
 	price = 0.0;
 }
 void RetailItem::setDescription(string aDescription)
