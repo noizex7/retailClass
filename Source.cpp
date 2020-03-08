@@ -109,13 +109,12 @@ void viewItems(int& i, RetailItem list[])
 {
 	char cont;
 	if (i == 0)
-		cout << "No Animals added yet.\n\n";
+		cout << "No Items added yet.\n\n";
 	else
 	{
-		cout << setw(25) << "Description" << setw(20) << "Units" << setw(20) << "Price\n";
+		cout << setw(10) << "Description" << setw(10) << "Units" << setw(10) << "Price\n";
 		for (int n = 0; n < i; n++)
 		{
-			cout << "Item #" << n + 1 << setw(20);
 			list[n].displayData();
 			cout << "\n";
 		}
@@ -128,5 +127,5 @@ void viewItems(int& i, RetailItem list[])
 
 void clrscrn()
 {
-	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 }
