@@ -1,9 +1,4 @@
 #include "RetailItem.h"
-#include <iostream>
-#include <string>
-#include <iomanip>
-
-using namespace std;
 
 void printMenu();
 void menuOptions(int, RetailItem[], int&);
