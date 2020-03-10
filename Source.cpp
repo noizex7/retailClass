@@ -4,7 +4,7 @@ void printMenu();
 void menuOptions(int, RetailItem[], int&);
 void addItems(RetailItem[], int&);
 void viewItems(int&, RetailItem[]);
-void cls();
+void CLS();
 void systemPause();
 
 int main()
@@ -15,7 +15,7 @@ int main()
 	{
 		printMenu();
 		cin >> choice;
-		cls();
+		CLS();
 		menuOptions(choice, list, i);
 	} while (choice != 3);
 	return 0;
@@ -34,7 +34,7 @@ void menuOptions(int option, RetailItem list[], int& i)
 	{
 	case 1:
 		addItems(list, i);
-		cls();
+		CLS();
 		break;
 	case 2:
 		viewItems(i, list);
@@ -118,10 +118,10 @@ void viewItems(int& i, RetailItem list[])
 
 	systemPause();
 
-	cls();
+	CLS();
 }
 
-void cls()
+void CLS()
 {
 	cout << string(60, '\n');
 }
