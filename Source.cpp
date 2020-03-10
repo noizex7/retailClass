@@ -4,7 +4,8 @@ void printMenu();
 void menuOptions(int, RetailItem[], int&);
 void addItems(RetailItem[], int&);
 void viewItems(int&, RetailItem[]);
-void clrscrn();
+void cls();
+void systemPause();
 
 int main()
 {
@@ -14,7 +15,7 @@ int main()
 	{
 		printMenu();
 		cin >> choice;
-		clrscrn();
+		cls();
 		menuOptions(choice, list, i);
 	} while (choice != 3);
 	return 0;
@@ -33,7 +34,7 @@ void menuOptions(int option, RetailItem list[], int& i)
 	{
 	case 1:
 		addItems(list, i);
-		clrscrn();
+		cls();
 		break;
 	case 2:
 		viewItems(i, list);
@@ -114,13 +115,21 @@ void viewItems(int& i, RetailItem list[])
 			cout << "\n";
 		}
 	}
-	cout << "Enter any key to continue.\n";
-	cin >> cont;
 
-	clrscrn();
+	systemPause();
+
+	cls();
 }
 
-void clrscrn()
+void cls()
 {
-	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+	cout << string(60, '\n');
+}
+
+void systemPause()
+{
+	char pause;
+
+	cout << "Enter any key to continue:\n";
+	cin >> pause;
 }
