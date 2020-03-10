@@ -47,5 +47,5 @@ double RetailItem::getPrice() const
 
 void RetailItem::displayData() const
 {
-	cout << setw(10) << getDescription() << setw(10) << getUnitsOnHand() << setw(10) << getPrice();
+	cout << setw(10) << getDescription() << setw(10) << getUnitsOnHand() << setw(10) << setprecision(2) << fixed << getPrice();
 }
